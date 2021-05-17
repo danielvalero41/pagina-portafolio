@@ -1,0 +1,122 @@
+@font-face{
+    font-family: 'Segoe UI Bold';
+    src: url('../assets/fonts/Segoe\ UI\ Bold.woff') format('woff'),
+    url('../assets/fonts/Segoe\ UI\ Bold.woff') format('woff');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Segoe UI';
+    src: url('../assets/fonts/Segoe\ UI.woff') format('woff'),
+    url('../assets/fonts/Segoe\ UI.woff') format('woff');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Segoe UI Bold';
+}
+
+p,a,small{
+    font-family: 'Segoe UI';
+}
+
+.bg-primary{
+    background-color:#671A2D !important ;
+}
+
+
+/*
+    Codigo para los efectos hover en los enlaces
+ */
+.enlace a{
+    position: relative;
+}
+
+.enlace a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #683C58, #432A46, #671A2D);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.enlace a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .enlace[data-animation="center"] a:hover::before {
+    transform-origin: center;
+  }
+/*Fin del codigo*/  
+
+.color-fondo{
+    background-color:#671A2D;
+    
+}
+.border-right{
+    border-right: 1px solid #671A2D !important;
+}
+
+.portada{
+    background-image: url('../assets/img/fondo.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+.img-content{
+    width: 20%;
+    height: 20vh;
+}
+
+.boton-demo{
+    background-color: #671A2D;
+    color:white;
+}
+
+.boton-seleccion{
+    background-color: white ;
+    color:#671A2D;
+}
+
+.boton-demo:hover{
+    background-color: white;
+    color:#671A2D ;
+    border: 1px solid #671A2D;
+}
+
+.content-porcetnaje{
+    color:#671A2D ;
+}
+
+/*Media queries*/
+
+@media(max-width:768px){
+    .img-content{
+        width: 25%;
+        height: 20vh;
+    }
+}
+
+@media(max-width:425px){
+    .img-content{
+        width: 45%;
+        height: 20vh;
+    }
+}
+
+@media(max-width:425px){
+    .img-content{
+        width: 60%;
+        height: 20vh;
+    }
+}
